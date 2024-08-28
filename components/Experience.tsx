@@ -81,7 +81,7 @@ export default function Experience({ isMobile }: { isMobile: boolean }) {
                 }}
               >
                 <h3 className="font-bold capitalize">{item.title}</h3>
-                <p className="font-normal !mt-0">{typeof item.location === "function" ? item.location() : item.location}</p>
+                <p className="font-normal !mt-0">{item.location}</p>
                 <p className="!mt-1 !font-normal text-gray-700 dark:text-white/75">
                   {item.description}
                 </p>

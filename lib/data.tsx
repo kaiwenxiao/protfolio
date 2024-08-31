@@ -62,7 +62,7 @@ export const experiencesData = [
     date: "2018 Aug - 2023 Aug",
   },
   {
-    title: "BA in Computer Science",
+    title: "BEng in Computer Science",
     location: "Guangzhou College of Commerce, China",
     description:
       "Graduated with a Bachelor of Computer Science, Gained foundational knowledge in Computer Science and solid my code skill.",
@@ -90,7 +90,7 @@ export const experiencesDataZn = [
     date: "2018 Aug - 2023 Aug",
   },
   {
-    title: "BA in Computer Science",
+    title: "BEng in Computer Science",
     location: "Guangzhou College of Commerce, China",
     description:
       "Graduated with a Bachelor of Computer Science, Gained foundational knowledge in Computer Science and solid my code skill.",

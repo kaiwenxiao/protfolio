@@ -4,6 +4,7 @@ import {FaVuejs} from "react-icons/fa";
 import {LuGraduationCap} from "react-icons/lu";
 import rubicGameImage from "@/public/2048-game.png";
 import breadditImage from "@/public/breaddit.png";
+import dashboard from "@/public/dashboard.png";
 import gameHubImage from "@/public/game-hub.png";
 import typingSpeedImage from "@/public/typing-speed.png";
 import Lunrron from '@/public/Lunroo.png'
@@ -50,7 +51,7 @@ export const experiencesData = [
     location: "Easyview, Shenzhen, Mainland China",
     description:
       "As an experienced developer maintain CRM and Sass system and secure user story requirements, where a Hong Kong based fintech company spreading its operations also APAC and Europe and helping with external asset managers and family offices.",
-    icon: React.createElement(LuGraduationCap),
+    icon: React.createElement(FaReact),
     date: "2023 Aug - Present",
   },
   {
@@ -66,7 +67,7 @@ export const experiencesData = [
     location: "Guangzhou College of Commerce, China",
     description:
       "Graduated with a Bachelor of Computer Science, Gained foundational knowledge in Computer Science and solid my code skill.",
-    icon: React.createElement(FaReact),
+    icon: React.createElement(LuGraduationCap),
     date: "2015 Sep - 2019 Jun",
   },
 
@@ -128,13 +129,12 @@ export const projectsData = [
     title: "Breddit",
     title_zh: "社交新闻论坛",
     description:
-      `A modern full-stack Reddit clone features infinite scrolling, secure authentication via NextAuth and Google, and a custom feed for authenticated users. It utilizes Upstash Redis for advanced caching and React-Query for efficient data fetching, ensuring a responsive and user-friendly experience with optimistic updates.
-            `,
-    desc_zh: "一个现代且简洁的Reddit克隆项目，使用Next.js、TypeScript和Tailwind CSS构建。项目功能包括无限滚动动态加载帖子、NextAuth与Google认证、为认证用户提供自定义Feed、高级缓存、乐观更新、React-Query数据获取、美观的帖子编辑器、图片上传和链接预览、以及完整的评论功能。",
-    tags: ["JavaScript", "HTML", "CSS3"],
-    imageUrl: breadditImage,
-    projectUrl: 'https://github.com/Codefreyy/Breddit',
-    demoUrl: 'https://joy-breddit.vercel.app/',
+      `A workstation for our agents dedicated to their users with managing fortune, addressing challenges, enhancing performance, and fostering business scalability.`,
+    desc_zh: "A workstation for our agents dedicated to their users with managing fortune, addressing challenges, enhancing performance, and fostering business scalability.",
+    tags: ["Vue", "d3", "file handling", "online editor"],
+    imageUrl: dashboard,
+    projectUrl: '',
+    demoUrl: 'https://t-fargo-crm.easyview.xyz/',
   },
 
 

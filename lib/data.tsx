@@ -126,8 +126,8 @@ export const projectsData = [
     demoUrl: 'https://www.hidingelephant.com/',
   },
   {
-    title: "Breddit",
-    title_zh: "社交新闻论坛",
+    title: "Easyview CRM",
+    title_zh: "Easyview CRM",
     description:
       `A workstation for our agents dedicated to their users with managing fortune, addressing challenges, enhancing performance, and fostering business scalability.`,
     desc_zh: "A workstation for our agents dedicated to their users with managing fortune, addressing challenges, enhancing performance, and fostering business scalability.",

@@ -102,13 +102,19 @@ export default function About() {
       {/*</p>*/}
       <p>
         As a college student, I embraced the world about Computer Science: <i>Principles of Computer Systems</i>,
-        <i>Algorithms and Data Structures</i>, <i>Computer Network</i>and etc. At the sametime I've learnt many of programming languages during the day, such as
+        <i>Algorithms and Data Structures</i>, <i>Computer Network</i>and etc. At the sametime I've learnt many of
+        programming languages during the day, such as
         <i> C</i>, <i>Java</i>, <i>SQL</i>, <i>JavaScript</i> and <i>Python</i>.
       </p>
-      <br />
+      <br/>
       <p>
-        My GPA was 3.5 in college time. Computer Science truly sparked my passion. I participated several competitions, like an algorithm design competition, call <Link href='https://news.gcc.edu.cn/mtsj/53df5e37dcff4a199cc76f8930ab3ea2.htm'  style={{ textDecoration: 'underline' }}>Lanqiao Cup</Link>,
-        and won a second class prize. And join the group to refactor <Link href='https://www.gcc.edu.cn/' style={{ textDecoration: 'underline' }}>college website</Link> as a FrontEnd developer.
+        My GPA was 3.5 in college time. Computer Science truly sparked my passion. I participated several competitions,
+        like an algorithm design competition, call <Link
+        href='https://news.gcc.edu.cn/mtsj/53df5e37dcff4a199cc76f8930ab3ea2.htm' style={{textDecoration: 'underline'}}>Lanqiao
+        Cup</Link>,
+        and won a second class prize. And join the group to refactor <Link href='https://www.gcc.edu.cn/'
+                                                                           style={{textDecoration: 'underline'}}>college
+        website</Link> as a FrontEnd developer.
       </p>
     </motion.section>
   )

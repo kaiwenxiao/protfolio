@@ -105,17 +105,6 @@ export type ProjectTags = typeof projectsData[number]["tags"];
 
 export const projectsData = [
   {
-    title: "HidingElephant",
-    title_zh: 'HidingElephant',
-    description:
-      "HidingElephant is an ingeniously integrate with icons and text AI-driven Logo design versatility for professional designers. It's fully empowered with advanced AI design model, making it easily to transform your logo into vector and enjoy collaboration and creativity during your work.",
-    desc_zh: "HidingElephant is an ingeniously integrate with icons and text AI-driven Logo design versatility for professional designers. It's fully empowered with advanced AI design model, making it easily to transform your logo into vector and enjoy collaboration and creativity during your work.",
-    tags: ["Next.js", "TypeScript", "PostgreSQL", 'TailwindCSS', 'Stripe', 'Shadcn UI', 'GSAP'],
-    isVideo: true,
-    projectUrl: '',
-    demoUrl: 'https://www.hidingelephant.com/',
-  },
-  {
     title: "Lunroo",
     title_zh: 'Lunroo',
     description: "A bundle of toolsets to empower your social media marketing productivity.",
@@ -126,7 +115,7 @@ export const projectsData = [
     demoUrl: 'https://www.hidingelephant.com/',
   },
   {
-    title: "Breddit",
+    title: "Easyview CRM",
     title_zh: "社交新闻论坛",
     description:
       `A workstation for our agents dedicated to their users with managing fortune, addressing challenges, enhancing performance, and fostering business scalability.`,
@@ -135,9 +124,8 @@ export const projectsData = [
     imageUrl: dashboard,
     projectUrl: '',
     demoUrl: 'https://t-fargo-crm.easyview.xyz/',
+    videoUrl: 'https://player.vimeo.com/video/1009449270?h=2729f267a0'
   },
-
-
 ]
 
 export const skillsData = [

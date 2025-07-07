@@ -1,6 +1,6 @@
 "use client"
 
-import React, {useRef} from "react"
+import {useEffect, useRef, useState} from "react"
 import {projectsData} from "@/lib/data"
 import Image from "next/image"
 import {motion, useScroll, useTransform} from "framer-motion"
@@ -8,6 +8,8 @@ import {FaGithubSquare} from "react-icons/fa"
 import Link from "next/link"
 import {FiExternalLink} from "react-icons/fi"
 import {useLocale} from "next-intl"
+import ReactPlayer from 'react-player';
+import {AiFillPlayCircle} from "react-icons/ai";
 
 type ProjectProps = (typeof projectsData)[number]
 
@@ -20,7 +22,7 @@ export default function Project({
                                   imageUrl,
                                   projectUrl,
                                   demoUrl,
-                                  isVideo
+                                  videoUrl
                                 }: ProjectProps) {
   const ref = useRef<HTMLDivElement>(null)
   const {scrollYProgress} = useScroll({
@@ -30,6 +32,25 @@ export default function Project({
   const scaleProgess = useTransform(scrollYProgress, [0, 1], [0.8, 1])
   const opacityProgess = useTransform(scrollYProgress, [0, 1], [0.6, 1])
   const activeLocale = useLocale()
+
+  const [selectedVideoUrl, setSelectedVideoUrl] = useState<string | null>(null);
+  useEffect(() => {
+    const handleEsc = (event: KeyboardEvent) => {
+      if (event.key === 'Escape') {
+        setSelectedVideoUrl(null);
+      }
+    };
+    if (selectedVideoUrl) {
+      window.addEventListener('keydown', handleEsc);
+    }
+    return () => {
+      window.removeEventListener('keydown', handleEsc);
+    }
+  }, [selectedVideoUrl]);
+
+  const onImageClick = (videoUrl: string | undefined) => {
+    videoUrl && setSelectedVideoUrl(videoUrl);
+  }
 
   return (
     <motion.div
@@ -88,28 +109,46 @@ export default function Project({
           </ul>
         </div>
 
-        {isVideo ? <video src="/hiding-elephant-logo-maker.mp4" autoPlay loop muted playsInline className="absolute hidden sm:block top-8 -right-20 w-[28.25rem] rounded-t-lg shadow-2xl
-        transition
-        "
-          />
-          : <Image
-            src={imageUrl!}
-            alt="Project I worked on"
-            quality={95}
-            className="absolute hidden sm:block top-8 -right-40 w-[28.25rem] rounded-t-lg shadow-2xl
-        transition
-        group-hover:scale-[1.04]
-        group-hover:-translate-x-3
-        group-hover:translate-y-3
-        group-hover:-rotate-2
 
-        group-even:group-hover:translate-x-3
-        group-even:group-hover:translate-y-3
-        group-even:group-hover:rotate-2
-
-        group-even:right-[initial] group-even:-left-40"
-          />}
+        <Image
+          src={imageUrl!}
+          alt="Project I worked on"
+          quality={95}
+          className={`absolute hidden sm:block top-8 -right-40 w-[28.25rem] rounded-t-lg shadow-2xl
+            transition
+            group-hover:scale-[1.04]
+            group-hover:-translate-x-3
+            group-hover:translate-y-3
+            group-hover:-rotate-2
+            group-even:group-hover:translate-x-3
+            group-even:group-hover:translate-y-3
+            group-even:group-hover:rotate-2
+            group-even:right-[initial]
+            group-even:-left-40
+            ${videoUrl ? 'cursor-pointer' : ''}`}
+          onClick={() => onImageClick(videoUrl)}
+        />
+        {videoUrl ? <div className="absolute top-36 left-32 cursor-pointer" onClick={() => onImageClick(videoUrl)}>
+          <AiFillPlayCircle size="24"/>
+        </div> : null}
       </section>
+      {selectedVideoUrl && (
+        <div className="fixed inset-0 bg-black bg-opacity-75 flex items-center justify-center z-50">
+          <button
+            onClick={() => setSelectedVideoUrl(null)}
+            className="absolute top-4 right-4 text-white text-2xl"
+            aria-label="Close video"
+          >
+            &times;
+          </button>
+          <ReactPlayer
+            src={selectedVideoUrl}
+            controls
+            width="80%"
+            height="80%"
+          />
+        </div>
+      )}
     </motion.div>
   )
 }

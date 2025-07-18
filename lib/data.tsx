@@ -112,7 +112,7 @@ export const projectsData = [
     tags: ["Next.js", "TypeScript", "PostgreSQL", 'TailwindCSS', 'Stripe'],
     imageUrl: Lunrron,
     projectUrl: '',
-    demoUrl: 'https://www.hidingelephant.com/',
+    demoUrl: 'https://lunroo.com/',
   },
   {
     title: "Easyview CRM",
